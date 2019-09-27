@@ -1,0 +1,98 @@
+* {
+    font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 14px;
+    line-height: 1.42857;
+}
+
+.topBar {
+    height: 30px;
+    background-color: #021935;
+    color: #C1C3C6;
+    font-family: "Microsoft YaHei", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    justify-content: center;
+    font-size: 12px;
+    align-items: center;
+}
+
+.formBar {
+    height: 30px;
+    background-color: #062448;
+    color: #C1C3C6;
+    font-family: "Microsoft YaHei", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    justify-content: center;
+    font-size: 12px;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hover-yellow:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.bg-pink {
+    background-color: #021935 !important;
+}
+
+.bg-pink-shallow {
+    background-color: #23324e !important;
+}
+
+.display-inline {
+    display: inline-block !important;
+}
+
+.h-33 {
+    height: 33px !important;
+}
+
+.bg-input {
+    background-color: #1f3a5b !important;
+    border-color: #1f3a5b !important;
+}
+
+.bg-input:focus,
+.bg-input:active {
+    background-color: #041A35;
+    border-color: #23B223;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(35, 178, 35, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(35, 178, 35, 0.6)
+}
+
+a:hover {
+    color: yellow !important;
+}
+
+li:active {
+    color: #FFCB01;
+    background-color: #1b273c;
+}
+
+li:hover {
+    color: #FFCB01;
+}
+
+.btn-label {
+    position: relative;
+    right: -20px;
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: #1f9d1f;
+    transform: skewX(-20deg);
+}
+.btn-labeled {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    overflow: hidden;
+}
+
+.form-responsive {
+    display: inline-flex !important;
+}
