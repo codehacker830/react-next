@@ -158,10 +158,8 @@ class Header extends React.Component {
                         </Navbar>
                     </div>
                 </div>
-<style jsx>{`
-
-
-`}</style>
+                <style jsx>{`
+                `}</style>
 
             </>
         )
