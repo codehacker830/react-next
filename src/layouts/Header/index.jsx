@@ -127,34 +127,34 @@ class Header extends React.Component {
                 <div className="row" style={{backgroundColor: '#23324E'}}>
                     <div className="col-md-8 offset-md-2 col-sm-12 col-xs-12">
                         <Navbar className="bg-pink-shallow p-0" color="light" light expand="md">
-                            <NavbarBrand href="#" className="mr-5 ml-1">
-                                <i className="fa fa-home text-white"></i>
-                            </NavbarBrand>
-                            <NavbarToggler className="text-white" onClick={this.toggle} />
-                            <Collapse isOpen={this.state.isOpen} navbar >
-                                <Nav className="space-between ml-1" navbar>
-                                    <NavItem>
-                                        <NavLink href="#" className="text-white">
-                                            Slots
+                            <Nav className="space-between ml-1" navbar>
+                                <NavItem>
+                                    <NavLink>
+                                        <i className="fa fa-home text-white"></i>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" className="text-white">
+                                        Slots
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" className="text-white">
+                                        Live Casino
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" className="text-white">
+                                        Promotions
                                         </NavLink>
-                                    </NavItem>
-                                    <NavItem>
-                                        <NavLink href="#" className="text-white">
-                                            Live Casino
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem>
-                                        <NavLink href="#" className="text-white">
-                                            Promotions
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem>
-                                        <NavLink href="#" className="text-white">
-                                            VIP
-                                        </NavLink>
-                                    </NavItem>
-                                </Nav>
-                            </Collapse>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" className="text-white">
+                                        VIP
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+
                         </Navbar>
                     </div>
                 </div>
