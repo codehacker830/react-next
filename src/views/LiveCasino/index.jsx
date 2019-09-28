@@ -8,8 +8,8 @@ import Footer from '../../layouts/footer';
 //import image
 
 import placeholder656_250 from '../../assets/images/placeholer656_250.png';
-import placeholer1441_500 from '../../assets/images/casino_bg.png';
-placeholer1441_500
+// import placeholer1441_500 from '../../assets/images/casino_bg.png';
+import placeholer1441_500 from '../../assets/images/placeholer1441_500.png';
 
 class LiveCasino extends React.Component {
     render() {
