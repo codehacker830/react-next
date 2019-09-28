@@ -50,7 +50,19 @@ class Header extends React.Component {
             date = '0' + date;
         }
 
-        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let hours = today.getHours();
+        if(hours < 10) {
+            hours = '0' + hours;
+        }
+        let minutes = today.getMinutes();
+        if(minutes < 10) {
+            minutes = '0' + minutes;
+        }
+        let seconds = today.getSeconds();
+        if(seconds < 10) {
+            seconds = '0' + seconds;
+        }
+        let time = hours + ':' + minutes + ':' + seconds;
         let timeZone = today.getTimezoneOffset();
         let currentTime = date + '/' + month + '/' + year + '  '  + time + ' ' + 'GMT ' + timeZone;
 
@@ -129,33 +141,48 @@ class Header extends React.Component {
                         <Navbar className="bg-pink-shallow p-0" color="light" light expand="md" style={{marginBottom: '0px'}}>
                             <Nav className="space-between ml-1" navbar>
                                 <NavItem>
-                                    <NavLink>
+                                    <NavLink href='/'>
                                         <i className="fa fa-home text-white"></i>
                                     </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink href="#" className="text-white">
+                                <NavItem className="dropdown">
+                                    <NavLink href='/slots' className="text-white dropdown-toggle" data-toggle="dropdown">
                                         Slots
                                     </NavLink>
+                                    <div className="dropdown-menu col-md-12">
+                                        <div>
+                                            <a href="/slots" className="dropdown-item">Action</a>
+                                        </div>
+                                        <div>
+                                            <a href="/slots" className="dropdown-item">Another action</a>
+                                        </div>
+                                    </div>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="#" className="text-white">
+                                    <NavLink href="live-casino" className="text-white">
                                         Live Casino
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="#" className="text-white">
+                                    <NavLink href='promotions' className="text-white">
                                         Promotions
                                         </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="#" className="text-white">
+                                    <NavLink href='vip' className="text-white">
                                         VIP
                                     </NavLink>
                                 </NavItem>
                             </Nav>
 
                         </Navbar>
+                    </div>
+                </div>
+                <div className='row' style={{position: 'absolute', top: '100px'}}>
+                    <div className='col-12'>
+                        <div>
+                            here is nav bar drop down menu
+                        </div>
                     </div>
                 </div>
                 <style jsx>{`
