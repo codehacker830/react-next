@@ -18,16 +18,16 @@ class Footer extends React.Component {
                             <div className="container text-center">
                                 <ul className="nav justify-content-center footer-nav list-inline">
                                     <li className="nav-item"><Link href="/"><a className="nav-link" title="Affiliate" target="_blank">Affiliate </a></Link></li>
-                                    <li className="nav-item"><Link href="/static/about-us"><a className="nav-link" title="About Us" target="_blank">About Us </a></Link></li>
-                                    <li className="nav-item"><Link href="/static/privacy"><a className="nav-link" title="Privacy" target="_blank">Privacy </a></Link></li>
-                                    <li className="nav-item"><Link href="/static/disclaimer"><a className="nav-link" title="Disclaimer" target="_blank">Disclaimer </a></Link></li>
-                                    <li className="nav-item"><Link href="/static/responsible-gambling"><a className="nav-link" title="Responsible Gaming" target="_blank">Responsible Gaming </a></Link></li>
-                                    <li className="nav-item"><Link href="/static/technology"><a className="nav-link" title="Technology" target="_blank">Technology </a></Link></li>
-                                    <li className="nav-item"><Link href="/static/faq" title="FAQ"><a className="nav-link" target="_blank">FAQ </a></Link></li>
-                                    <li className="nav-item"><Link href="/static/terms-of-service"><a className="nav-link" title="Terms &amp; Conditions" target="_blank">Terms &amp; Conditions </a></Link></li>
-                                    <li className="nav-item"><Link href="/static/help" title="Help"><a className="nav-link" target="_blank">Help </a></Link></li>
+                                    <li className="nav-item"><Link href="/"><a className="nav-link" title="About Us" target="_blank">About Us </a></Link></li>
+                                    <li className="nav-item"><Link href="/"><a className="nav-link" title="Privacy" target="_blank">Privacy </a></Link></li>
+                                    <li className="nav-item"><Link href="/"><a className="nav-link" title="Disclaimer" target="_blank">Disclaimer </a></Link></li>
+                                    <li className="nav-item"><Link href="/"><a className="nav-link" title="Responsible Gaming" target="_blank">Responsible Gaming </a></Link></li>
+                                    <li className="nav-item"><Link href="/"><a className="nav-link" title="Technology" target="_blank">Technology </a></Link></li>
+                                    <li className="nav-item"><Link href="/" title="FAQ"><a className="nav-link" target="_blank">FAQ </a></Link></li>
+                                    <li className="nav-item"><Link href="/"><a className="nav-link" title="Terms &amp; Conditions" target="_blank">Terms &amp; Conditions </a></Link></li>
+                                    <li className="nav-item"><Link href="/" title="Help"><a className="nav-link" target="_blank">Help </a></Link></li>
                                 </ul>
-                                <div className="text-muted">© 2019<Link href="#"><a> Gameplay Interactive</a></Link>. All rights reserved. | 18+</div>
+                                <div className="text-muted">© 2019<Link href="/"><a> Gameplay Interactive</a></Link>. All rights reserved. | 18+</div>
                             </div>
                         </section>
                         <section className="section info-section">
@@ -67,9 +67,9 @@ class Footer extends React.Component {
                                     </div>
                                     <div className="col-md-8 certificate text-right"><br/>
                                         <ul className="nav justify-content-end list-inline">
-                                            <li className="nav-item"><Link href="/static/firstcagayan" ><a target="_blank" className="fc">First Cagayan </a></Link></li>
-                                            <li className="nav-item"><Link href="/static/bmm" ><a target="_blank" className="bmm">BMM </a></Link></li>
-                                            <li className="nav-item"><Link href="/static/gli" ><a target="_blank" className="gli">GLI Certifications</a></Link></li>
+                                            <li className="nav-item"><Link href="/" ><a target="_blank" className="fc">First Cagayan </a></Link></li>
+                                            <li className="nav-item"><Link href="/" ><a target="_blank" className="bmm">BMM </a></Link></li>
+                                            <li className="nav-item"><Link href="/" ><a target="_blank" className="gli">GLI Certifications</a></Link></li>
                                             <li className="nav-item"><Link ><a className="tst">Payouts Reviewed </a></Link></li>
                                             <li className="nav-item"><Link ><a className="itech">Tech Lab </a></Link></li>
                                             <li className="nav-item"><Link ><a className="verified">Verified &amp; Secured</a></Link></li>
