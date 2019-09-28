@@ -104,10 +104,10 @@ class Header extends React.Component {
                         <img className="logo ml-1" style={{height: '42px'}} src={Logo} alt='logo'/>
                         <Form className="float-right form-responsive mt-1">
                             <FormGroup className="mb-0 mr-2">
-                                <Input type="text" name="username" className="bg-input" id="username" placeholder="Username"/>
+                                <Input type="text" name="username" className="bg-input mb-0 h-100" id="username" placeholder="Username"/>
                             </FormGroup>
                             <div className="input-group mb-0">
-                                <input type="text" className="form-control bg-input" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2"/>
+                                <input type="text" className="form-control bg-input mb-0 h-100" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2"/>
                                 <div className="input-group-append h-33">
                                     <span className="input-group-text bg-pink-shallow  border-0" id="basic-addon2">
                                         <i className="fa fa-lock"></i> 
@@ -126,7 +126,7 @@ class Header extends React.Component {
                 </div>
                 <div className="row" style={{backgroundColor: '#23324E'}}>
                     <div className="col-md-8 offset-md-2 col-sm-12 col-xs-12">
-                        <Navbar className="bg-pink-shallow p-0" color="light" light expand="md">
+                        <Navbar className="bg-pink-shallow p-0" color="light" light expand="md" style={{marginBottom: '0px'}}>
                             <Nav className="space-between ml-1" navbar>
                                 <NavItem>
                                     <NavLink>
