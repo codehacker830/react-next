@@ -23,9 +23,9 @@ class Footer extends React.Component {
                                     <li className="nav-item"><Link href="/"><a className="nav-link" title="Disclaimer" target="_blank">Disclaimer </a></Link></li>
                                     <li className="nav-item"><Link href="/"><a className="nav-link" title="Responsible Gaming" target="_blank">Responsible Gaming </a></Link></li>
                                     <li className="nav-item"><Link href="/"><a className="nav-link" title="Technology" target="_blank">Technology </a></Link></li>
-                                    <li className="nav-item"><Link href="/" title="FAQ"><a className="nav-link" target="_blank">FAQ </a></Link></li>
+                                    <li className="nav-item"><Link href="/"><a className="nav-link" title="FAQ" target="_blank">FAQ </a></Link></li>
                                     <li className="nav-item"><Link href="/"><a className="nav-link" title="Terms &amp; Conditions" target="_blank">Terms &amp; Conditions </a></Link></li>
-                                    <li className="nav-item"><Link href="/" title="Help"><a className="nav-link" target="_blank">Help </a></Link></li>
+                                    <li className="nav-item"><Link href="/"><a className="nav-link" title="Help" target="_blank">Help </a></Link></li>
                                 </ul>
                                 <div className="text-muted">© 2019<Link href="/"><a> Gameplay Interactive</a></Link>. All rights reserved. | 18+</div>
                             </div>
@@ -58,8 +58,8 @@ class Footer extends React.Component {
                                     <div className="col-sm-4 social">
                                         <h6>Connect with us</h6>
                                         <ul className="nav list-inline">
-                                            <li className="nav-item"><Link  href="https://weibo.com" ><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
-                                            <li className="nav-item"><Link href="http://t.qq.com"><a  target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="https://weibo.com"><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="http://t.qq.com"><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
                                             <li className="nav-item"><Link href="https://www.wechat.com" ><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
                                             <li className="nav-item"><Link href="http://www.imqq.com" ><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
                                             <li className="nav-item"><Link href="http://sns.renren.com" ><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
@@ -70,9 +70,9 @@ class Footer extends React.Component {
                                             <li className="nav-item"><Link href="/" ><a target="_blank" className="fc">First Cagayan </a></Link></li>
                                             <li className="nav-item"><Link href="/" ><a target="_blank" className="bmm">BMM </a></Link></li>
                                             <li className="nav-item"><Link href="/" ><a target="_blank" className="gli">GLI Certifications</a></Link></li>
-                                            <li className="nav-item"><Link ><a className="tst">Payouts Reviewed </a></Link></li>
-                                            <li className="nav-item"><Link ><a className="itech">Tech Lab </a></Link></li>
-                                            <li className="nav-item"><Link ><a className="verified">Verified &amp; Secured</a></Link></li>
+                                            <li className="nav-item"><a href="#" className="tst">Payouts Reviewed </a></li>
+                                            <li className="nav-item"><a href="#" className="itech">Tech Lab </a></li>
+                                            <li className="nav-item"><a href="#" className="verified">Verified &amp; Secured</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@ class Footer extends React.Component {
                                             <li className="nav-item"><Link href="https://www.mozilla.org/en-US/firefox/new"><a  target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
                                             <li className="nav-item"><Link href="https://www.microsoft.com/en-us/download/internet-explorer.aspx"><a  target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
                                             <li className="nav-item"><Link href="https://support.apple.com/downloads/safari"><a  target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
-                                            <li className="nav-item"><Link href="https://pinyin.sogou.com" target="_blank"><a ><span className="data-icon icon-weibo"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="https://pinyin.sogou.com"><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
                                         </ul>
                                     </div>
                                 </div>
