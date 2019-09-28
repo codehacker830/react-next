@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 //import page
-import SlotsPage from '../src/views/slots';
+import SlotsPage from '../src/views/Slots';
 
 const Slots = () => (
     <div>
