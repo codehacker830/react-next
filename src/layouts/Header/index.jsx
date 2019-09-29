@@ -16,6 +16,18 @@ import {
 import 'flag-icon-css/css/flag-icon.css';
 import '../../assets/css/header/header.css';
 import Logo from '../../assets/images/Logo.png';
+import slots_01 from '../../assets/images/slots/slots_01.png';
+import slots_02 from '../../assets/images/slots/slots_02.png';
+import slots_03 from '../../assets/images/slots/slots_03.png';
+import slots_04 from '../../assets/images/slots/slots_04.png';
+import slots_05 from '../../assets/images/slots/slots_05.png';
+import slots_06 from '../../assets/images/slots/slots_06.png';
+import slots_07 from '../../assets/images/slots/slots_07.png';
+import slots_08 from '../../assets/images/slots/slots_08.png';
+import slots_09 from '../../assets/images/slots/slots_09.png';
+import slots_10 from '../../assets/images/slots/slots_10.png';
+import slots_11 from '../../assets/images/slots/slots_11.png';
+import slots_12 from '../../assets/images/slots/slots_12.png';
 
 class Header extends React.Component {
     constructor(props) {
@@ -145,18 +157,104 @@ class Header extends React.Component {
                                         <i className="fa fa-home text-white"></i>
                                     </NavLink>
                                 </NavItem>
-                                <NavItem className="dropdown">
+                                <NavItem className="dropdown slots">
                                     <NavLink href='/slots' className="text-white dropdown-toggle" data-toggle="dropdown">
                                         Slots
                                     </NavLink>
-                                    <div className="dropdown-menu col-md-12">
+                                    {/* <div className="dropdown-menu col-md-12">
                                         <div>
                                             <a href="/slots" className="dropdown-item">Action</a>
                                         </div>
                                         <div>
                                             <a href="/slots" className="dropdown-item">Another action</a>
                                         </div>
-                                    </div>
+                                    </div> */}
+                                        <div className='row slots-dropdown'>
+                                            <div className='col-12'>
+                                                <div className='row'>
+                                                    {/* <div className='col-8 offset-2'> */}
+                                                        <div className="card col-2">
+                                                            <img src={slots_01} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="card col-2">
+                                                            <img src={slots_02} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="card col-2">
+                                                            <img src={slots_03} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="card col-2">
+                                                            <img src={slots_04} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="card col-2">
+                                                            <img src={slots_05} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="card col-2">
+                                                            <img src={slots_06} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                    {/* </div> */}
+                                                </div>
+                                            </div>
+                                            <div className='col-12'>
+                                                <div className='row'>
+                                                    {/* <div className='col-8 offset-2'> */}
+                                                        <div className="card  col-2">
+                                                            <img src={slots_07} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="card col-2">
+                                                            <img src={slots_08} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="card col-2">
+                                                            <img src={slots_09} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="card col-2">
+                                                            <img src={slots_10} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="card col-2">
+                                                            <img src={slots_11} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                        <div className="card col-2">
+                                                            <img src={slots_12} className="card-img-top" alt='slots_01' />
+                                                            <div className="card-body">
+                                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                            </div>
+                                                        </div>
+                                                    {/* </div> */}
+                                                </div>
+                                            </div>
+                                        </div>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink href="live-casino" className="text-white">
@@ -174,17 +272,10 @@ class Header extends React.Component {
                                     </NavLink>
                                 </NavItem>
                             </Nav>
-
                         </Navbar>
                     </div>
                 </div>
-                <div className='row' style={{position: 'absolute', top: '100px'}}>
-                    <div className='col-12'>
-                        <div>
-                            here is nav bar drop down menu
-                        </div>
-                    </div>
-                </div>
+
                 <style jsx>{`
                 `}</style>
 

@@ -96,3 +96,11 @@ li:hover {
 .form-responsive {
     display: inline-flex !important;
 }
+
+.slots-dropdown {
+    display: none;
+}
+
+.slots:hover {
+    display: block;
+}
