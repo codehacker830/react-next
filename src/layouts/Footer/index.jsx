@@ -159,33 +159,6 @@ footer{
 	padding-left: 5px;
 	padding-right: 5px
 }
-@media (min-width: 320px) {
-	.container {
-		width: 300px
-	}
-}
-@media (min-width: 520px) {
-	.container {
-		width: 480px
-	}
-}
-@media (min-width: 768px) {
-	.container {
-		width: 750px
-	}
-}
-
-@media (min-width: 992px) {
-	.container {
-		width: 980px
-	}
-}
-
-@media (min-width: 1200px) {
-	.container {
-		width: 1180px
-	}
-}
 
 
 #footer {
