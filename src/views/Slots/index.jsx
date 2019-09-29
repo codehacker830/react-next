@@ -34,7 +34,7 @@ class SlotsPage extends React.Component {
                 <div className="main-container"> 
                     <section className="section"> 
                         <div className="hero slick-initialized slick-slider">
-                            <div className="slick-list draggable">
+                            <div className="slick-list draggable" style={{backgroundColor:'#041A34'}}>
                                 <div className="slick-track" style = {{opacity: '1', width: '1400px',margin:'auto'}} >
                                     <div className="slick-slide slick-current slick-active" aria-hidden="false">
                                         <div className="hero-slide item" style={{width: '100%', display: 'inline-block'}}>  
@@ -57,13 +57,9 @@ class SlotsPage extends React.Component {
                     <section class="section container">
                         <ul class="row cards">
                             <li class="col-md-3">
-                            <a href="/slots/pt" target="_self" class="card">
+                            <a href="/slots/pt" target="_self" class="card_box">
                                 <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={PT}
-                                    alt=""
-                                />
+                                <img class="card-img" src={PT} alt=""/>
                                 </span>
                                 <span class="card-footer card-img-overlay">
                                 <span class="game-title">PT Slots</span>
@@ -71,13 +67,9 @@ class SlotsPage extends React.Component {
                             </a>
                             </li>
                             <li class="col-md-3">
-                            <a href="/slots/mgs" target="_self" class="card">
+                            <a href="/slots/mgs" target="_self" class="">
                                 <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={MG}
-                                    alt=""
-                                />
+                                <img class="card-img" src={MG} alt=""/>
                                 </span>
                                 <span class="card-footer card-img-overlay">
                                 <span class="game-title">MG Slots</span>
@@ -85,13 +77,9 @@ class SlotsPage extends React.Component {
                             </a>
                             </li>
                             <li class="col-md-3">
-                            <a href="/slots/png" target="_self" class="card">
+                            <a href="/slots/png" target="_self" class="card_box">
                                 <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={PNG}
-                                    alt=""
-                                />
+                                <img class="card-img" src={PNG} alt="" />
                                 </span>
                                 <span class="card-footer card-img-overlay">
                                 <span class="game-title">PNG Slots</span>
@@ -99,125 +87,20 @@ class SlotsPage extends React.Component {
                             </a>
                             </li>
                             <li class="col-md-3">
-                            <a href="/slots/gpi" target="_self" class="card">
+                            <a href="/slots/gpi" target="_self" class="card_box">
                                 <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={GPI}
-                                    alt=""
-                                />
+                                <img class="card-img" src={placeholer296_194} alt="" />
                                 </span>
                                 <span class="card-footer card-img-overlay">
                                 <span class="game-title">GPI Slots</span>
                                 </span>
                             </a>
                             </li>
+
                             <li class="col-md-3">
-                            <a href="/slots/ttg" target="_self" class="card">
+                            <a href="/slots/netent" target="_self" class="card_box">
                                 <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={TTG}
-                                    alt=""
-                                />
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">TTG Slots</span>
-                                </span>
-                            </a>
-                            </li>
-                            <li class="col-md-3">
-                            <a href="/slots/isoftbet" target="_self" class="card">
-                                <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={ISB}
-                                    alt=""
-                                />
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">ISB Slots</span>
-                                </span>
-                            </a>
-                            </li>
-                            <li class="col-md-3">
-                            <a href="/slots/betsoft" target="_self" class="card">
-                                <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={BS}
-                                    alt=""
-                                />
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">BS Slots</span>
-                                </span>
-                            </a>
-                            </li>
-                            <li class="col-md-3">
-                            <a href="/slots/gspot" target="_self" class="card">
-                                <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={GS}
-                                    alt=""
-                                />
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">GS Slots</span>
-                                </span>
-                            </a>
-                            </li>
-                            <li class="col-md-3">
-                            <a href="/slots/qtech" target="_self" class="card">
-                                <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={QT}
-                                    alt=""
-                                />
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">QT Slots</span>
-                                </span>
-                            </a>
-                            </li>
-                            <li class="col-md-3">
-                            <a href="/slots/uc8" target="_self" class="card">
-                                <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={UCB}
-                                    alt=""
-                                />
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">UC8 Slots</span>
-                                </span>
-                            </a>
-                            </li>
-                            <li class="col-md-3">
-                            <a href="/slots/pplay" target="_self" class="card">
-                                <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={PP}
-                                    alt=""
-                                />
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">PP Slots</span>
-                                </span>
-                            </a>
-                            </li>
-                            <li class="col-md-3">
-                            <a href="/slots/netent" target="_self" class="card">
-                                <span class="card-img-wrapper">
-                                <img
-                                    class="card-img"
-                                    src={placeholer296_194}
-                                    alt=""
-                                />
+                                <img class="card-img" src={placeholer296_194} alt="" />
                                 </span>
                                 <span class="card-footer card-img-overlay">
                                 <span class="game-title">Netent Slots</span>
@@ -234,25 +117,62 @@ class SlotsPage extends React.Component {
 	line-height: 1.42857;
 	color: #fff;
 }
-
-.cards {
-	margin-bottom: 0;
-	padding-left: 0;
-	list-style: none
+ul {
+    list-style: none;
+    list-style-type:none;
+}
+.card-box {
+    margin-bottom: 30px;
+    display: block;
+    position: relative;
+}
+.card-img {
+	border-radius: 4px
+}
+.card-img-wrapper{
+    min-height: 250px;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    text-align: center;
+    position: relative
+}
+.card-img {
+    position: relative;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	display: block;
+	max-width: 100%;
+	height: auto;
+	-webkit-backface-visibility: hidden
 }
 
-.cards:before,
-.cards:after {
-	content: " ";
-	display: table
+.card-footer {
+	color: #fff;
+	background-color: #23324E;
+	padding: 8px 12px;
+	border-top: 1px solid rgba(255, 255, 255, 0.1)
 }
 
-.cards:after {
-	clear: both
-}
 
-.cards .card {
-	margin-bottom: 30px
+.card-footer .card-img-overlay {
+	text-align: center;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	z-index: 4;
+	position: absolute;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+    background-color: rgba(4, 26, 53, 0.8);
+    padding: 6px 12px;
+    color: white;
+}
+.game-title {
+	font-size: 16px
 }
 ul.row,
 ol.row {
@@ -282,43 +202,7 @@ a:focus{
     background-color: #23B223;
     border-color: #1f9d1f;
 }
-.btn {
-    display: inline-block;
-    margin-bottom: 0;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    background-image: none;
-    border: 1px solid transparent;
-    white-space: nowrap;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857;
-    border-radius: 4px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.btn:hover,
-.btn:focus{
-	background-color: #1b871b;
-    color:white;
-}
-.slick-slide {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.hero .item img {
-    height: auto;
-    margin-left: 50%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
+
 .main-container{
     background-color: #041A35
 }
@@ -501,58 +385,6 @@ a:focus{
 	width: 60px;
 	height: 8px;
 	background: none rgba(255, 255, 255, 0.3)
-}
-
-.carousel .slick-dots .slick-active button {
-	background-color: #fff
-}
-
-.carousel .slick-arrow {
-	cursor: pointer;
-	min-width: 40px;
-	border-radius: 0;
-	font: 0/0 a;
-	color: transparent;
-	text-shadow: none;
-	background-color: transparent;
-	border: 0;
-	opacity: .2;
-	filter: alpha(opacity=20);
-	-webkit-transition: 0.3s;
-	-o-transition: 0.3s;
-	transition: 0.3s
-}
-
-.carousel .slick-arrow:after {
-	content: '';
-	color: #fff;
-	text-align: center;
-	font: 40px/40px 'icon-base';
-	width: 40px;
-	height: 40px;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	transform: translateY(-50%)
-}
-
-.carousel .slick-arrow:hover,
-.carousel .slick-arrow:focus {
-	opacity: 1;
-	filter: alpha(opacity=100)
-}
-
-.carousel .slick-prev:after {
-	content: '\e909'
-}
-
-.carousel .slick-next:after {
-	content: '\e90a'
-}
-.hero {
-    background-color:#012248;
 }
 
    `}</style>
