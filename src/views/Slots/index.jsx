@@ -45,70 +45,70 @@ class SlotsPage extends React.Component {
                             </div>
                         </div> 
                     </section>  
-                    <section className="section marquee-section"> 
-                        <div className="container-fluid">  
-                            <div className="marquee-label"> Latest News: </div> 
-                                <div className="marquee-wrapper"> 
-                                    <ul className="marquee">  
-                                    </ul> 
-                                </div> 
+                    <section className="section marquee-section">
+                        <div className="container-fluid">
+                            <div className="marquee-label"> Latest News: </div>
+                            <div className="marquee-wrapper">
+                                <ul className="marquee">
+                                </ul>
+                            </div>
                         </div>
                     </section>
-                    <section class="section container">
-                        <ul class="row cards">
-                            <li class="col-md-3">
-                            <a href="/slots/pt" target="_self" class="card_box">
-                                <span class="card-img-wrapper">
-                                <img class="card-img" src={PT} alt=""/>
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">PT Slots</span>
-                                </span>
-                            </a>
+                    <section className="section container">
+                        <ul className="row cards">
+                            <li className="col-md-3">
+                                <a href="/slots/" target="_self" className="card_box">
+                                    <span className="card-img-wrapper">
+                                        <img className="card-img" src={PT} alt="" />
+                                    </span>
+                                    <span className="card-footer card-img-overlay">
+                                        <span className="game-title">PT Slots</span>
+                                    </span>
+                                </a>
                             </li>
-                            <li class="col-md-3">
-                            <a href="/slots/mgs" target="_self" class="">
-                                <span class="card-img-wrapper">
-                                <img class="card-img" src={MG} alt=""/>
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">MG Slots</span>
-                                </span>
-                            </a>
+                            <li className="col-md-3">
+                                <a href="/slots" target="_self" className="">
+                                    <span className="card-img-wrapper">
+                                        <img className="card-img" src={MG} alt="" />
+                                    </span>
+                                    <span className="card-footer card-img-overlay">
+                                        <span className="game-title">MG Slots</span>
+                                    </span>
+                                </a>
                             </li>
-                            <li class="col-md-3">
-                            <a href="/slots/png" target="_self" class="card_box">
-                                <span class="card-img-wrapper">
-                                <img class="card-img" src={PNG} alt="" />
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">PNG Slots</span>
-                                </span>
-                            </a>
+                            <li className="col-md-3">
+                                <a href="/slots" target="_self" className="card_box">
+                                    <span className="card-img-wrapper">
+                                        <img className="card-img" src={PNG} alt="" />
+                                    </span>
+                                    <span className="card-footer card-img-overlay">
+                                        <span className="game-title">PNG Slots</span>
+                                    </span>
+                                </a>
                             </li>
-                            <li class="col-md-3">
-                            <a href="/slots/gpi" target="_self" class="card_box">
-                                <span class="card-img-wrapper">
-                                <img class="card-img" src={placeholer296_194} alt="" />
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">GPI Slots</span>
-                                </span>
-                            </a>
+                            <li className="col-md-3">
+                                <a href="/slots" target="_self" className="card_box">
+                                    <span className="card-img-wrapper">
+                                        <img className="card-img" src={placeholer296_194} alt="" />
+                                    </span>
+                                    <span className="card-footer card-img-overlay">
+                                        <span className="game-title">GPI Slots</span>
+                                    </span>
+                                </a>
                             </li>
 
-                            <li class="col-md-3">
-                            <a href="/slots/netent" target="_self" class="card_box">
-                                <span class="card-img-wrapper">
-                                <img class="card-img" src={placeholer296_194} alt="" />
-                                </span>
-                                <span class="card-footer card-img-overlay">
-                                <span class="game-title">Netent Slots</span>
-                                </span>
-                            </a>
+                            <li className="col-md-3">
+                                <a href="/slots" target="_self" className="card_box">
+                                    <span className="card-img-wrapper">
+                                        <img className="card-img" src={placeholer296_194} alt="" />
+                                    </span>
+                                    <span className="card-footer card-img-overlay">
+                                        <span className="game-title">Netent Slots</span>
+                                    </span>
+                                </a>
                             </li>
                         </ul>
-                        </section>
+                    </section>
                 </div>
 <style jsx>{`
 * {
