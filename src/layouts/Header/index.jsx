@@ -11,6 +11,7 @@ import {
     FormGroup, 
     Input
 } from 'reactstrap';
+import swal from 'sweetalert';
 
 //import css
 import 'flag-icon-css/css/flag-icon.css';
@@ -39,6 +40,8 @@ class Header extends React.Component {
             isOpen: false,
             isShowCasinoDropDown: false,
             isShowSlotsDropDown: false,
+            username: '',
+            password: '',
         }
 
         this.toggle = this.toggle.bind(this);
@@ -118,6 +121,35 @@ class Header extends React.Component {
         })
     }
 
+    handleUserNameChange = ($event) => {
+        this.setState({
+            username: $event.target.value
+        })
+    }
+
+    handlePasswordChange = ($event) => {   
+        this.setState({
+            password: $event.target.value
+        })
+    }
+
+    logIn = () => {
+        if(this.state.username == '' || this.state.password == '') {
+            console.log("username and password is invalid");
+            swal({
+                title: "Alert",
+                text: "Please Enter Username and Password",
+                dangerMode: true,
+            });
+        } else {
+            let loginData = {
+                username: this.state.username,
+                password: this.state.password,
+            }
+            console.log("here goes login api: ", loginData);
+        }
+    }
+
     render() {
         return(
             <>
@@ -156,18 +188,18 @@ class Header extends React.Component {
                 <div className="row ml-0 mr-0 formBar" style={{height: '75px'}}>
                     <div className="col-md-8 col-sm-12 col-xs-12">
                         <img className="logo ml-1" style={{height: '42px'}} src={Logo} alt='logo'/>
-                        <Form className="float-right form-responsive mt-1">
+                        <Form onSubmit={($event) => {$event.preventDefault()}} className="float-right form-responsive mt-1">
                             <FormGroup className="mb-0 mr-2">
-                                <Input type="text" name="username" className="bg-input mb-0 h-100" id="username" placeholder="Username"/>
+                                <Input type="text" name="username" value={this.state.username} onChange={this.handleUserNameChange} className="bg-input mb-0 h-100 text-white" id="username" placeholder="Username"/>
                             </FormGroup>
                             <div className="input-group mb-0">
-                                <input type="text" className="form-control bg-input mb-0 h-100" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2"/>
+                                <input type="text" className="form-control bg-input mb-0 h-100 text-white" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" aria-label="Password" aria-describedby="basic-addon2"/>
                                 <div className="input-group-append h-33">
                                     <span className="input-group-text bg-pink-shallow  border-0" id="basic-addon2">
                                         <i className="fa fa-lock"></i> 
                                     </span>
                                 </div>
-                                <button className="btn btn-warning ml-2 h-33">LOGIN</button>
+                                <button className="btn btn-warning ml-2 h-33" onClick={this.logIn}>LOGIN</button>
                                 <button type="button" className="btn btn-success btn-labeled ml-2 h-33">
                                     SIGN UP
                                     <span className="btn-label">
