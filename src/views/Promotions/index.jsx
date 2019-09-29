@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Head from 'next/head';
 import Link from 'next/link';
 //import components

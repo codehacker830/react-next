@@ -1,9 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {
-    Collapse,
     Navbar,
-    NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
@@ -37,16 +35,18 @@ class Header extends React.Component {
 
         this.state = {
             currentTime: null,
-            isOpen: false,
             isShowCasinoDropDown: false,
             isShowSlotsDropDown: false,
+            isShowSignUpModal: false,
             username: '',
             password: '',
         }
 
-        this.toggle = this.toggle.bind(this);
         this.showCasinoDropDown = this.showCasinoDropDown.bind(this);
         this.showSlotsDropDown = this.showSlotsDropDown.bind(this);
+        this.logIn = this.logIn.bind(this);
+        this.signUp = this.signUp.bind(this);
+        this.hideSignUpModal = this.hideSignUpModal.bind(this);
     }
 
     componentDidMount() {
@@ -89,12 +89,6 @@ class Header extends React.Component {
         this.setState({
             currentTime: currentTime,
         })
-    }
-
-    toggle = () => {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
     }
 
     showSlotsDropDown = () => {
@@ -150,6 +144,19 @@ class Header extends React.Component {
         }
     }
 
+    signUp = () => {
+        console.log("here sign up action occurs");
+        this.setState({
+            isShowSignUpModal: true
+        })
+    }
+
+    hideSignUpModal = () => {
+        this.setState({
+            isShowSignUpModal: false
+        })
+    }
+
     render() {
         return(
             <>
@@ -200,7 +207,7 @@ class Header extends React.Component {
                                     </span>
                                 </div>
                                 <button className="btn btn-warning ml-2 h-33" onClick={this.logIn}>LOGIN</button>
-                                <button type="button" className="btn btn-success btn-labeled ml-2 h-33">
+                                <button type="button" onClick={this.signUp} className="btn btn-success btn-labeled ml-2 h-33">
                                     SIGN UP
                                     <span className="btn-label">
                                         <i className="fa fa-lock"></i>
@@ -355,13 +362,10 @@ class Header extends React.Component {
                             </div>
                         </div>
                     )}
-
-                </div>  
+                </div>
             </div>
-                    
-                <style jsx>{`
-                `}</style>
-
+            <style jsx>{`
+            `}</style>
             </>
         )
     }
