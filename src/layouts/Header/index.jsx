@@ -10,6 +10,7 @@ import {
     Input
 } from 'reactstrap';
 import swal from 'sweetalert';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 //import css
 import 'flag-icon-css/css/flag-icon.css';
@@ -145,10 +146,11 @@ class Header extends React.Component {
     }
 
     signUp = () => {
-        console.log("here sign up action occurs");
+        
         this.setState({
             isShowSignUpModal: true
         })
+        console.log("here sign up action occurs: ", this.state);
     }
 
     hideSignUpModal = () => {
