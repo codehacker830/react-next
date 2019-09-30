@@ -29,6 +29,8 @@ import slots_10 from '../../assets/images/slots/slots_10.png';
 import slots_11 from '../../assets/images/slots/slots_11.png';
 import slots_12 from '../../assets/images/slots/slots_12.png';
 import placeHolder from '../../assets/images/live-casino/place-holder.png';
+import usFlag from '../../assets/images/flags/1x1/us.svg';
+import cnFlag from '../../assets/images/flags/1x1/cn.svg';
 
 class Header extends React.Component {
     constructor(props) {
@@ -179,14 +181,16 @@ class Header extends React.Component {
                             </span>
                             <span className="dropdown language">
                                 <a href="#" data-toggle="dropdown" style={{textDecoration: 'none', color: 'white'}} aria-haspopup="true" aria-expanded="false">
-                                    <span className="hover-yellow pr-2">English</span>
-                                    <span className="flag-icon flag-icon-us"></span>
+                                    <span className="hover-yellow pr-2">English
+                                        <i><img src={usFlag} alt='us-flag' style={{width: '30px', height: '15px'}}/></i>
+                                    </span>
                                 </a>
                                 <ul data-js="dropdown-menu" style={{fontSize: '12px'}} className="dropdown-menu bg-pink" aria-labelledby="language">
                                     <li>
                                         <a data-js="language-selection" style={{textDecoration: 'none', color: 'white'}} href="#" data-lang="zh-hans">
-                                            <span className="hover-yellow pl-2 pr-2">简体中文</span>
-                                            <span className="flag-icon flag-icon-cn"></span>
+                                            <span className="hover-yellow pl-2 pr-2">简体中文
+                                                {/* <i><img src={cnFlag} alt='cn-flag' style={{width: '30px', height: '15px'}}/></i> */}
+                                            </span>
                                         </a>
                                     </li>
                                 </ul>
