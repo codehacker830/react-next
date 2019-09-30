@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Dash from '../src/views/Dash';
 
 const Index = () => (
-    <div>
+    <div style={{minWidth: '1300px'}}>
         <Head>
             <title>Prometheus Template</title>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />

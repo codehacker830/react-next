@@ -11,6 +11,7 @@ import {
 } from 'reactstrap';
 import swal from 'sweetalert';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import css
 import 'flag-icon-css/css/flag-icon.css';
@@ -49,7 +50,7 @@ class Header extends React.Component {
         this.showSlotsDropDown = this.showSlotsDropDown.bind(this);
         this.logIn = this.logIn.bind(this);
         this.signUp = this.signUp.bind(this);
-        this.hideSignUpModal = this.hideSignUpModal.bind(this);
+        this.toggleSignUpModal = this.toggleSignUpModal.bind(this);
     }
 
     componentDidMount() {
@@ -148,17 +149,17 @@ class Header extends React.Component {
     }
 
     signUp = () => {
-        
-        this.setState({
-            isShowSignUpModal: true
-        })
         console.log("here sign up action occurs: ", this.state);
+        this.setState({
+            isShowSignUpModal: true,
+        })
     }
 
-    hideSignUpModal = () => {
-        this.setState({
-            isShowSignUpModal: false
-        })
+    toggleSignUpModal = () => {
+        console.log("here sign up modal toggle action: ", this.state);
+        this.setState(prevState => ({
+            isShowSignUpModal: !prevState.isShowSignUpModal
+        }))
     }
 
     render() {
@@ -213,12 +214,29 @@ class Header extends React.Component {
                                     </span>
                                 </div>
                                 <button className="btn btn-warning ml-2 h-33" onClick={this.logIn}>LOGIN</button>
-                                <button type="button" onClick={this.signUp} className="btn btn-success btn-labeled ml-2 h-33">
+                                <button type="button" onClick={this.toggleSignUpModal} className="btn btn-success btn-labeled ml-2 h-33">
                                     SIGN UP
                                     <span className="btn-label">
                                         <i className="fa fa-lock"></i>
                                     </span>
                                 </button>
+                                <div className='row'>
+                                    <div className='col-12'>
+                                        {/* <Modal isOpen={this.state.isShowSignUpModal} toggle={this.toggleSignUpModal} className={this.props.className}>
+                                            <ModalHeader toggle={this.toggleSignUpModal}>Modal title</ModalHeader>
+                                            <ModalBody>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </ModalBody>
+                                            <ModalFooter>
+                                                <Button color="primary" onClick={this.toggleSignUpModal}>Do Something</Button>{' '}
+                                                <Button color="secondary" onClick={this.toggleSignUpModal}>Cancel</Button>
+                                            </ModalFooter>
+                                        </Modal> */}
+                                    </div>
+                                </div>
                             </div>
                         </Form>
                     </div>
@@ -369,6 +387,70 @@ class Header extends React.Component {
                         </div>
                     )}
                 </div>
+                {/* <div className='row text-center signUp-modal' >
+                    {this.state.isShowSignUpModal && (
+                        <div className='col-4 offset-4'  style={{zIndex: '1000', position: 'absolute', backgroundColor: 'beige'}}>
+                            <div className='row p-3'>
+                                <div className='col-12'>
+                                    <img src={Logo} alt='signUp-modal' style={{width: '100%', height: '100%'}}/>
+                                </div>
+                            </div>
+                            <div className='row p-3'>
+                                <div className='col-12'>
+                                    <h3>Sign Up</h3>
+                                    <form>
+                                        <div className="form-group row">
+                                            <label for="staticEmail" className="col-2 col-form-label">Username</label>
+                                            <div className="col-10">
+                                                <input type="text" readonly className="form-control-plaintext" id="staticEmail" value="email@example.com" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label for="inputPassword" className="col-2 col-form-label">Password</label>
+                                            <div className="col-10">
+                                                <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label for="inputPassword" className="col-2 col-form-label">Confirm Password</label>
+                                            <div className="col-10">
+                                                <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label for="inputPassword" className="col-2 col-form-label">Full Name</label>
+                                            <div className="col-10">
+                                                <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label for="inputPassword" className="col-2 col-form-label">Date of Birth</label>
+                                            <div className="col-10">
+                                                <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label for="inputPassword" className="col-2 col-form-label">Email</label>
+                                            <div className="col-10">
+                                                <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div className='row'>
+                                <div className='col-12'>
+                                    
+                                </div>
+                            </div>
+                            <div className='row'>
+                                <div className='col-12'>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div> */}
             </div>
             <style jsx>{`
             `}</style>

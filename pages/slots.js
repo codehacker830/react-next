@@ -4,7 +4,7 @@ import Head from 'next/head';
 import SlotsPage from '../src/views/Slots';
 
 const Slots = () => (
-    <div>
+    <div style={{minWidth: '1300px'}}>
         <Head>
             <title>Prometheus Template</title>
             <title>Prometheus Template</title>
