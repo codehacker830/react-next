@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Link from 'next/link';
 import Head from 'next/head';
 //import components
@@ -45,18 +46,19 @@ class SlotsPage extends React.Component {
                             </div>
                         </div> 
                     </section>  
-                    <section className="section marquee-section"> 
-                        <div className="container-fluid">  
-                            <div className="marquee-label"> Latest News: </div> 
-                                <div className="marquee-wrapper"> 
-                                    <ul className="marquee">  
-                                    </ul> 
-                                </div> 
+                    <section className="section marquee-section">
+                        <div className="container-fluid">
+                            <div className="marquee-label"> Latest News: </div>
+                            <div className="marquee-wrapper">
+                                <ul className="marquee">
+                                </ul>
+                            </div>
                         </div>
                     </section>
                     <section className="section container">
                         <ul className="row cards">
                             <li className="col-md-3">
+
                             <a href="/slots" target="_self" className="card" style={{}}>
                                 <span className="card-img-wrapper">
                                 <img className="card-img" src={PT} alt=""/>
@@ -186,7 +188,7 @@ class SlotsPage extends React.Component {
                             </li>
 
                         </ul>
-                        </section>
+                    </section>
                 </div>
 <style jsx>{`
 * {

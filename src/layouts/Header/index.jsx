@@ -1,9 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {
-    Collapse,
     Navbar,
-    NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
@@ -11,6 +9,9 @@ import {
     FormGroup, 
     Input
 } from 'reactstrap';
+import swal from 'sweetalert';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import css
 import 'flag-icon-css/css/flag-icon.css';
@@ -29,6 +30,8 @@ import slots_10 from '../../assets/images/slots/slots_10.png';
 import slots_11 from '../../assets/images/slots/slots_11.png';
 import slots_12 from '../../assets/images/slots/slots_12.png';
 import placeHolder from '../../assets/images/live-casino/place-holder.png';
+import usFlag from '../../assets/images/flags/1x1/us.svg';
+import cnFlag from '../../assets/images/flags/1x1/cn.svg';
 
 class Header extends React.Component {
     constructor(props) {
@@ -36,14 +39,18 @@ class Header extends React.Component {
 
         this.state = {
             currentTime: null,
-            isOpen: false,
             isShowCasinoDropDown: false,
             isShowSlotsDropDown: false,
+            isShowSignUpModal: false,
+            username: '',
+            password: '',
         }
 
-        this.toggle = this.toggle.bind(this);
         this.showCasinoDropDown = this.showCasinoDropDown.bind(this);
         this.showSlotsDropDown = this.showSlotsDropDown.bind(this);
+        this.logIn = this.logIn.bind(this);
+        this.signUp = this.signUp.bind(this);
+        this.toggleSignUpModal = this.toggleSignUpModal.bind(this);
     }
 
     componentDidMount() {
@@ -88,12 +95,6 @@ class Header extends React.Component {
         })
     }
 
-    toggle = () => {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
-
     showSlotsDropDown = () => {
         this.setState({
             isShowSlotsDropDown: true,
@@ -118,6 +119,49 @@ class Header extends React.Component {
         })
     }
 
+    handleUserNameChange = ($event) => {
+        this.setState({
+            username: $event.target.value
+        })
+    }
+
+    handlePasswordChange = ($event) => {   
+        this.setState({
+            password: $event.target.value
+        })
+    }
+
+    logIn = () => {
+        if(this.state.username == '' || this.state.password == '') {
+            console.log("username and password is invalid");
+            swal({
+                title: "Alert",
+                text: "Please Enter Username and Password",
+                dangerMode: true,
+            });
+        } else {
+            let loginData = {
+                username: this.state.username,
+                password: this.state.password,
+            }
+            console.log("here goes login api: ", loginData);
+        }
+    }
+
+    signUp = () => {
+        console.log("here sign up action occurs: ", this.state);
+        this.setState({
+            isShowSignUpModal: true,
+        })
+    }
+
+    toggleSignUpModal = () => {
+        console.log("here sign up modal toggle action: ", this.state);
+        this.setState(prevState => ({
+            isShowSignUpModal: !prevState.isShowSignUpModal
+        }))
+    }
+
     render() {
         return(
             <>
@@ -138,14 +182,16 @@ class Header extends React.Component {
                             </span>
                             <span className="dropdown language">
                                 <a href="#" data-toggle="dropdown" style={{textDecoration: 'none', color: 'white'}} aria-haspopup="true" aria-expanded="false">
-                                    <span className="hover-yellow pr-2">English</span>
-                                    <span className="flag-icon flag-icon-us"></span>
+                                    <span className="hover-yellow pr-2">English
+                                        <i><img src={usFlag} alt='us-flag' style={{width: '30px', height: '15px'}}/></i>
+                                    </span>
                                 </a>
                                 <ul data-js="dropdown-menu" style={{fontSize: '12px'}} className="dropdown-menu bg-pink" aria-labelledby="language">
                                     <li>
                                         <a data-js="language-selection" style={{textDecoration: 'none', color: 'white'}} href="#" data-lang="zh-hans">
-                                            <span className="hover-yellow pl-2 pr-2">简体中文</span>
-                                            <span className="flag-icon flag-icon-cn"></span>
+                                            <span className="hover-yellow pl-2 pr-2">简体中文
+                                                {/* <i><img src={cnFlag} alt='cn-flag' style={{width: '30px', height: '15px'}}/></i> */}
+                                            </span>
                                         </a>
                                     </li>
                                 </ul>
@@ -156,24 +202,41 @@ class Header extends React.Component {
                 <div className="row ml-0 mr-0 formBar" style={{height: '75px'}}>
                     <div className="col-md-8 col-sm-12 col-xs-12">
                         <img className="logo ml-1" style={{height: '42px'}} src={Logo} alt='logo'/>
-                        <Form className="float-right form-responsive mt-1">
+                        <Form onSubmit={($event) => {$event.preventDefault()}} className="float-right form-responsive mt-1">
                             <FormGroup className="mb-0 mr-2">
-                                <Input type="text" name="username" className="bg-input mb-0 h-100" id="username" placeholder="Username"/>
+                                <Input type="text" name="username" value={this.state.username} onChange={this.handleUserNameChange} className="bg-input mb-0 h-100 text-white" id="username" placeholder="Username"/>
                             </FormGroup>
                             <div className="input-group mb-0">
-                                <input type="text" className="form-control bg-input mb-0 h-100" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2"/>
+                                <input type="text" className="form-control bg-input mb-0 h-100 text-white" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" aria-label="Password" aria-describedby="basic-addon2"/>
                                 <div className="input-group-append h-33">
                                     <span className="input-group-text bg-pink-shallow  border-0" id="basic-addon2">
                                         <i className="fa fa-lock"></i> 
                                     </span>
                                 </div>
-                                <button className="btn btn-warning ml-2 h-33">LOGIN</button>
-                                <button type="button" className="btn btn-success btn-labeled ml-2 h-33">
+                                <button className="btn btn-warning ml-2 h-33" onClick={this.logIn}>LOGIN</button>
+                                <button type="button" onClick={this.toggleSignUpModal} className="btn btn-success btn-labeled ml-2 h-33">
                                     SIGN UP
                                     <span className="btn-label">
                                         <i className="fa fa-lock"></i>
                                     </span>
                                 </button>
+                                <div className='row'>
+                                    <div className='col-12'>
+                                        {/* <Modal isOpen={this.state.isShowSignUpModal} toggle={this.toggleSignUpModal} className={this.props.className}>
+                                            <ModalHeader toggle={this.toggleSignUpModal}>Modal title</ModalHeader>
+                                            <ModalBody>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </ModalBody>
+                                            <ModalFooter>
+                                                <Button color="primary" onClick={this.toggleSignUpModal}>Do Something</Button>{' '}
+                                                <Button color="secondary" onClick={this.toggleSignUpModal}>Cancel</Button>
+                                            </ModalFooter>
+                                        </Modal> */}
+                                    </div>
+                                </div>
                             </div>
                         </Form>
                     </div>
@@ -323,13 +386,74 @@ class Header extends React.Component {
                             </div>
                         </div>
                     )}
-
-                </div>  
+                </div>
+                {/* <div className='row text-center signUp-modal' >
+                    {this.state.isShowSignUpModal && (
+                        <div className='col-4 offset-4'  style={{zIndex: '1000', position: 'absolute', backgroundColor: 'beige'}}>
+                            <div className='row p-3'>
+                                <div className='col-12'>
+                                    <img src={Logo} alt='signUp-modal' style={{width: '100%', height: '100%'}}/>
+                                </div>
+                            </div>
+                            <div className='row p-3'>
+                                <div className='col-12'>
+                                    <h3>Sign Up</h3>
+                                    <form>
+                                        <div className="form-group row">
+                                            <label for="staticEmail" className="col-2 col-form-label">Username</label>
+                                            <div className="col-10">
+                                                <input type="text" readonly className="form-control-plaintext" id="staticEmail" value="email@example.com" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label for="inputPassword" className="col-2 col-form-label">Password</label>
+                                            <div className="col-10">
+                                                <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label for="inputPassword" className="col-2 col-form-label">Confirm Password</label>
+                                            <div className="col-10">
+                                                <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label for="inputPassword" className="col-2 col-form-label">Full Name</label>
+                                            <div className="col-10">
+                                                <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label for="inputPassword" className="col-2 col-form-label">Date of Birth</label>
+                                            <div className="col-10">
+                                                <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label for="inputPassword" className="col-2 col-form-label">Email</label>
+                                            <div className="col-10">
+                                                <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div className='row'>
+                                <div className='col-12'>
+                                    
+                                </div>
+                            </div>
+                            <div className='row'>
+                                <div className='col-12'>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div> */}
             </div>
-                    
-                <style jsx>{`
-                `}</style>
-
+            <style jsx>{`
+            `}</style>
             </>
         )
     }

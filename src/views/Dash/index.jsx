@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 //import components
 import Header from '../../layouts/Header';
@@ -48,7 +49,7 @@ class Dash extends React.Component {
                         <JackPot/>
                         <LatestNews/>
                         <FeatureGames/>
-                    </div>
+                    </div>     
                 <Footer/>
             </div>
             <style jsx>{`
