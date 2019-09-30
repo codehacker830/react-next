@@ -14,7 +14,7 @@ import placeholer1441_500 from '../../assets/images/casino_bg.png';
 class LiveCasino extends React.Component {
     render() {
         return (
-            <div>
+            <>
                 <Header/>
                 <div className="main-container"> 
                     <section className="section"> 
@@ -84,6 +84,7 @@ class LiveCasino extends React.Component {
                         </div>
                     </section>  
                 </div>
+                <Footer/>
 <style jsx>{`
 * {
     font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -387,8 +388,7 @@ a:focus{
 }
 
    `}</style>
-                <Footer/>
-            </div>
+            </>
         )
     }
 }
