@@ -1,0 +1,98 @@
+.marquee-section {
+    overflow: hidden;
+    color: #fff;
+    padding: 0 !important;
+    height: 40px;
+    border: 1px solid #094484;
+    background-color: #062448;
+    border-radius: 4px;
+    margin: 10px auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.marquee-section:before,
+.marquee-section:after {
+	content: " ";
+	display: table
+}
+
+.marquee-section:after {
+	clear: both
+}
+
+@media (min-width: 768px) {
+	.marquee-section {
+		width: 750px
+	}
+}
+
+@media (min-width: 992px) {
+	.marquee-section {
+		width: 1230px
+	}
+}
+
+@media (min-width: 1200px) {
+	.marquee-section {
+		width: 1230px
+	}
+}
+
+.marquee-section .marquee-label,
+.marquee-section .marquee-wrapper {
+	position: relative;
+	vertical-align: top;
+	height: 40px;
+	line-height: 40px
+}
+
+.marquee-section>.container {
+	position: relative
+}
+
+.marquee-section .marquee-label {
+	float: left;
+	margin-right: 10px;
+	width: 110px;
+	color: #FFCB01;
+	text-transform: uppercase;
+	font-size: 14px
+}
+
+.marquee-section .marquee-wrapper {
+	float: left;
+	cursor: pointer;
+	width: calc(100% - 120px)
+}
+
+.marquee-section .marquee-wrapper>.marquee {
+	margin: 0;
+	padding: 0
+}
+
+.marquee-section .marquee-wrapper>.marquee li {
+	margin-right: 30px
+}
+
+.marquee-section .marquee {
+	padding-left: 0;
+	list-style: none;
+	margin-left: -5px
+}
+
+.marquee-section .marquee>li {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	line-height: 40px;
+	-webkit-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	transition: color 0.3s
+}
+
+.marquee-section .marquee:hover * {
+	color: #fff
+}

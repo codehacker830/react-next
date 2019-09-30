@@ -1,0 +1,206 @@
+.jackpot-section {
+	margin: 30px auto
+}
+.jackpot-section {
+    line-height: 1.42857;
+    color: #fff;
+	margin: 0 auto;
+	text-align: center;
+	width: 1136px;
+	min-height: 150px;
+	padding-top: 37.5px;
+	background: transparent none center no-repeat
+}
+
+.jackpot-section>.container {
+	width: 100%
+}
+
+.jackpot-section .data-icon {
+	color: #39f;
+	font-size: 30px
+}
+
+.jackpot-label {
+	font-size: 24px;
+	text-transform: uppercase
+}
+
+.jackpot-value {
+    margin-top:20px;
+	font-size: 80px;
+	min-width: 800px;
+	min-height: 100px;
+	position: relative;
+	border-radius: 60px;
+	display: inline-block;
+	padding: 0 60px;
+	background-color: rgba(9, 68, 132, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+.jackpot-value .currency {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
+}
+
+.jackpot-value .odometer {
+	z-index: 1;
+	font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	min-width: 657px
+}
+
+.jackpot-value .odometer .odometer-digit,
+.jackpot-value .odometer .odometer-formatting-mark,
+.jackpot-value .odometer .odometer-radix-mark {
+	float: left;
+	text-align: center;
+	line-height: 100px;
+	display: inline-block
+}
+
+.jackpot-value .odometer .odometer-digit,
+.jackpot-value .odometer .odometer-value {
+	padding: 0 5px;
+	min-width: 54px
+}
+
+.jackpot-value:before,
+.jackpot-value:after {
+	content: '';
+	position: absolute;
+	display: inline-block;
+	background: transparent url("/uploaded/spade888/aefce851a85c383591fd89c71ca0a671586b39b33730a3e93cf1b81396ad16e8.png") center/cover no-repeat;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+	mix-blend-mode: luminosity
+}
+
+.jackpot-value:before {
+	top: -70px;
+	left: 154px;
+	width: 251px;
+	height: 248px;
+	background-image: url("/uploaded/spade888/aefce851a85c383591fd89c71ca0a671586b39b33730a3e93cf1b81396ad16e8.png")
+}
+
+.jackpot-value:after {
+	top: -77px;
+	left: 480px;
+	width: 211px;
+	height: 208px;
+	background-image: url("/uploaded/spade888/103cf7f406a836f95c215e4a3c3c65b69acf71bd204c98886d2dfb9691f9eb7f.png")
+}
+
+
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+	position: relative;
+	font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.1em
+}
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-auto-theme .odometer-digit-spacer,
+.odometer.odometer-auto-theme .odometer-digit-spacer .odometer-digit-spacer,
+.odometer.odometer-theme-default,
+.odometer.odometer-theme-default .odometer-digit-spacer,
+.odometer.odometer-theme-default .odometer-digit-spacer .odometer-digit-spacer {
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	*display: inline;
+	*zoom: 1
+}
+
+.odometer.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-default .odometer-digit {
+	position: relative
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
+	visibility: hidden
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-value {
+	display: block
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
+	text-align: left;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {
+	-webkit-backface-visibility: hidden
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value {
+	-webkit-transform: translateZ(0)
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value {
+	position: absolute
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
+	-webkit-transition: transform 2s;
+	-o-transition: transform 2s;
+	transition: transform 2s
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%)
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%)
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+	-webkit-transition: transform 2s;
+	-o-transition: transform 2s;
+	transition: transform 2s;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	transform: translateY(0)
+}
+
+.odometer.odometer-auto-theme .odometer-value,
+.odometer.odometer-theme-default .odometer-value {
+	text-align: center
+}
+
+
+.currency {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #C1C3C6;
+    font-weight: 300;
+    font-size: 80px;
+}
