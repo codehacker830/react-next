@@ -31,24 +31,24 @@ class Dash extends React.Component {
                         <section className="section featured-products">
                             <div className="container">
                                 <ul  className="row cards">
-                                    <li className="col-md-3">
+                                    <li className="col-3">
                                         <Card source={card1}>sporstbook</Card>
                                     </li>
-                                    <li className="col-md-3">
+                                    <li className="col-3">
                                         <Card source={card2}>PROMOTIONS</Card>
                                     </li>
-                                    <li className="col-md-3">
+                                    <li className="col-3">
                                         <Card source={card3}>SLOT GAMES</Card>
                                     </li>
-                                    <li className="col-md-3">
+                                    <li className="col-3">
                                         <Card source={card4}>LIVE CASINO</Card>
                                     </li>
                                 </ul>
                             </div>
                         </section>    
-                        <JackPot/>
-                        <LatestNews/>
-                        <FeatureGames/>
+                        <JackPot />
+                        <LatestNews />
+                        <FeatureGames />
                     </div>     
                 <Footer/>
             </div>
