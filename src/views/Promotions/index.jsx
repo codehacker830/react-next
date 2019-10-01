@@ -6,45 +6,69 @@ import Link from 'next/link';
 import Header from '../../layouts/header';
 import Footer from '../../layouts/footer';
 //import css
-// import css from "../../../../static/extras.css"
+
+//import images
+import warning from '../../assets/images/warning.png';
 
 class PromotionPage extends React.Component {
     render() {
         return (
             <>
-            <Head>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-            </Head>
-            <div>
-                <Header/>
-                <div className="promotions">
-                    <div className="main-container">
-                        <section className="section marquee-section"> 
+            <Header/>
+            <div className="promotions">
+                <div className="main-container">
+                    <section className="section marquee-section">
+                        <a href="http://hackbet.com/home"  target="_blank">
                             <div className="contain_box">  
                                 <div className="marquee-label"> Latest News: </div> 
                                 <div className="marquee-wrapper"> 
                                     <ul className="marquee" ></ul> 
                                 </div>
                             </div>
-                        </section>
-                        <section className="section contain_box"> 
-                            <ul className="nav nav-tabs nav-justified category-section">  
-                                <li className="active nav-item"> <Link href="/promotions"><a >All</a></Link> </li>  
-                                <li className="nav-item"> <Link href="/promotions"><a >Live Casino</a></Link> </li>  
-                                <li className="nav-item"> <Link href="/promotions"><a >Lottery</a></Link> </li>  
-                                <li className="nav-item"> <Link href="/promotions"><a >Slots</a></Link> </li>  
-                                <li className="nav-item"> <Link href="/promotions"><a >Special</a></Link> </li>  
-                                <li className="nav-item"> <Link href="/promotions"><a >Sports</a></Link> </li>  
-                            </ul> 
-                            <ul data-js="promo-cards-container" class="cards row">
-
-                            </ul>
-                        </section>  
-                    </div>
+                        </a> 
+                    </section>
+                    <section className="section contain_box"> 
+                        <ul className="nav nav-tabs nav-justified category-section">  
+                            <li className="active nav-item"> <Link href="/promotions"><a >All</a></Link> </li>  
+                            <li className="nav-item"> <Link href="/promotions"><a >Live Casino</a></Link> </li>  
+                            <li className="nav-item"> <Link href="/promotions"><a >Lottery</a></Link> </li>  
+                            <li className="nav-item"> <Link href="/promotions"><a >Slots</a></Link> </li>  
+                            <li className="nav-item"> <Link href="/promotions"><a >Special</a></Link> </li>  
+                            <li className="nav-item"> <Link href="/promotions"><a >Sports</a></Link> </li>  
+                        </ul> 
+                        <ul data-js="promo-cards-container" className="cards row" style={{listStyle:"none"}}>
+                                <li className="no-result text-center"> 
+                                    <h1 className="display-1 data-icon icon-warning-o"></h1>
+                                    <img src={warning}/>
+                                    <h5>No Promos found for this category</h5> 
+                                </li>
+                        </ul>
+                    </section>  
                 </div>
-                <Footer/>
             </div>
+            <Footer/>
             <style jsx>{`
+.no-result {
+color: #C1C3C6;
+text-align: center;
+margin-bottom: 60px;
+}
+.text-center {
+    display:block;
+margin-left:auto;
+margin-right:auto;
+text-align: center;
+}
+.text-center img {
+text-align: center;
+width:auto;
+height:50%;
+display:block;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:60px;
+}
+
 .warning {
     margin-right: auto;
     margin-left: auto;

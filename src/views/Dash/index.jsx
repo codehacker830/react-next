@@ -46,9 +46,9 @@ class Dash extends React.Component {
                                 </ul>
                             </div>
                         </section>    
-                        <JackPot/>
-                        <LatestNews/>
-                        <FeatureGames/>
+                        <JackPot />
+                        <LatestNews />
+                        <FeatureGames />
                     </div>     
                 <Footer/>
             </div>
