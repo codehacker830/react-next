@@ -7,8 +7,6 @@
 }
 .card {
     margin-bottom: 0;
-    -webkit-box-shadow: 0 2px 30px rgba(0,0,0,0.5);
-    box-shadow: 0 2px 30px rgba(0,0,0,0.5);
 }   
 .card-img,
 .card-img-top {
