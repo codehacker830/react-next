@@ -370,31 +370,26 @@ footer{
 #footer .payment a.visa {
 	width: 62px;
 	background-position-x: 0px;
-    background-color: white;
 }
 
 #footer .payment a.mastercard {
 	width: 42px;
 	background-position-x: -72px;
-    background-color: black;
 }
 
 #footer .payment a.alipay {
 	width: 26px;
 	background-position-x: -124px;
-    background-color: white;
 }
 
 #footer .payment a.skrill {
 	width: 65px;
 	background-position-x: -160px;
-    background-color: black;
 }
 
 #footer .payment a.wechat {
 	width: 115px;
 	background-position-x: -235px;
-    background-color: white;
 }
 
 .data-icon,
