@@ -13,7 +13,7 @@ import badge6 from '../../../../assets/images/badge_6.jpg';
 import './style.css';
 
 const Card = props => (
-    <li class="col-md-2">
+    <li class="col-2">
         <div class="card">
             <div class="card-header">
                 <span class="card-title">{props.children}</span>
@@ -37,7 +37,7 @@ const FeatureGames = () => (
     <>
     <section class="section featured-games container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-2">
                 <h5 class="heading">Feature Games</h5>
                 <h6 class="ratings">
                     <i class="data-icon icon-star"></i> 
@@ -49,7 +49,7 @@ const FeatureGames = () => (
                 <p>Start your search with a look at the best games on our site.</p>
                 <BtnBordered>See More</BtnBordered>
             </div>
-            <div class="col-md-10">
+            <div class="col-10">
                 <ul class="row cards game-cards" style={{listStyle:"none"}}>
                     <Card source={badge1}>Jungle Jim</Card>
                     <Card source={badge2}>Immortal Roma...</Card>

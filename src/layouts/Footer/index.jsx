@@ -2,7 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Link from 'next/link';
 import Head from "next/head";
-
+//import payment images
+import visa from '../../assets/images/logos/visa.png';
+import mastercard from '../../assets/images/logos/mastercard.png';
+import alipay from '../../assets/images/logos/alipay.png';
+import skrill from '../../assets/images/logos/skrill.png';
+import wechat from '../../assets/images/logos/wechat.png';
+//import certificate images
+import fc from '../../assets/images/logos/fc.png';
+import bmm from '../../assets/images/logos/bmm.png';
+import gli from '../../assets/images/logos/gli.png';
+import tst from '../../assets/images/logos/tst.png';
+import itech from '../../assets/images/logos/itech.png';
+import verified from '../../assets/images/logos/verified.png';
+ 
 class Footer extends React.Component {
     render() {
         return (
@@ -60,20 +73,20 @@ class Footer extends React.Component {
                                         <h6>Connect with us</h6>
                                         <ul className="nav list-inline">
                                             <li className="nav-item"><Link href="https://weibo.com"><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
-                                            <li className="nav-item"><Link href="http://t.qq.com"><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
-                                            <li className="nav-item"><Link href="https://www.wechat.com" ><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
-                                            <li className="nav-item"><Link href="http://www.imqq.com" ><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
-                                            <li className="nav-item"><Link href="http://sns.renren.com" ><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="http://t.qq.com"><a target="_blank"><span className="data-icon fa fa-tencent-weibo"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="https://www.wechat.com" ><a target="_blank"><span className="data-icon fa fa-weixin"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="http://www.imqq.com" ><a target="_blank"><span className="data-icon fa fa-qq"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="http://sns.renren.com" ><a target="_blank"><span className="data-icon fa fa-renren"></span></a></Link></li>
                                         </ul>
                                     </div>
                                     <div className="col-md-8 certificate text-right"><br/>
                                         <ul className="nav justify-content-end list-inline">
-                                            <li className="nav-item"><Link href="/" ><a target="_blank" className="fc">First Cagayan </a></Link></li>
-                                            <li className="nav-item"><Link href="/" ><a target="_blank" className="bmm">BMM </a></Link></li>
-                                            <li className="nav-item"><Link href="/" ><a target="_blank" className="gli">GLI Certifications</a></Link></li>
-                                            <li className="nav-item"><a href="#" className="tst">Payouts Reviewed </a></li>
-                                            <li className="nav-item"><a href="#" className="itech">Tech Lab </a></li>
-                                            <li className="nav-item"><a href="#" className="verified">Verified &amp; Secured</a></li>
+                                            <li className="nav-item"><Link href="/" ><a target="_blank" className="fc"><img src={fc}/>First Cagayan </a></Link></li>
+                                            <li className="nav-item"><Link href="/" ><a target="_blank" className="bmm"><img src={bmm}/>BMM </a></Link></li>
+                                            <li className="nav-item"><Link href="/" ><a target="_blank" className="gli"><img src={gli}/>GLI Certifications</a></Link></li>
+                                            <li className="nav-item"><a href="#" className="tst"><img src={tst}/>Payouts Reviewed </a></li>
+                                            <li className="nav-item"><a href="#" className="itech"><img src={itech}/>Tech Lab </a></li>
+                                            <li className="nav-item"><a href="#" className="verified"><img src={verified}/>Verified &amp; Secured</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -85,21 +98,21 @@ class Footer extends React.Component {
                                     <div className="col-md-9 payment">
                                         <h6>Payment Method</h6>
                                         <ul className="list-inline">
-                                            <li><Link href="https://usa.visa.com"><a  target="_blank" className="visa"> Visa </a></Link></li>
-                                            <li><Link href="https://www.mastercard.us"><a  target="_blank" className="mastercard"> Mastercard </a></Link></li>
-                                            <li><Link href="https://intl.alipay.com"><a  target="_blank" className="alipay"> Alipay </a></Link></li>
-                                            <li><Link href="https://www.skrill.com"><a  target="_blank" className="skrill"> Skrill </a></Link></li>
-                                            <li><Link href="https://pay.weixin.qq.com"><a  target="_blank" className="wechat"> WeChat </a></Link></li>
+                                            <li><Link href="https://usa.visa.com"><a  target="_blank" className="visa"> Visa <img src={visa} /></a></Link></li>
+                                            <li><Link href="https://www.mastercard.us"><a  target="_blank" className="mastercard"> Mastercard <img src={mastercard} /></a></Link></li>
+                                            <li><Link href="https://intl.alipay.com"><a  target="_blank" className="alipay"> Alipay <img src={alipay} /></a></Link></li>
+                                            <li><Link href="https://www.skrill.com"><a  target="_blank" className="skrill"> Skrill <img src={skrill} /></a></Link></li>
+                                            <li><Link href="https://pay.weixin.qq.com"><a  target="_blank" className="wechat"> WeChat <img src={wechat} /></a></Link></li>
                                         </ul>
                                     </div>
                                     <div className="col-md-3 browser text-right">
                                         <h6>Suggested Browser</h6>
                                         <ul className="nav list-inline justify-content-end">
-                                            <li className="nav-item"><Link href="https://www.google.com/chrome"><a  target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
-                                            <li className="nav-item"><Link href="https://www.mozilla.org/en-US/firefox/new"><a  target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
-                                            <li className="nav-item"><Link href="https://www.microsoft.com/en-us/download/internet-explorer.aspx"><a  target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
-                                            <li className="nav-item"><Link href="https://support.apple.com/downloads/safari"><a  target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
-                                            <li className="nav-item"><Link href="https://pinyin.sogou.com"><a target="_blank"><span className="data-icon icon-weibo"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="https://www.google.com/chrome"><a  target="_blank"><span className="data-icon fa fa-chrome"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="https://www.mozilla.org/en-US/firefox/new"><a  target="_blank"><span className="data-icon fa fa-firefox"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="https://www.microsoft.com/en-us/download/internet-explorer.aspx"><a  target="_blank"><span className="data-icon fa fa-internet-explorer"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="https://support.apple.com/downloads/safari"><a  target="_blank"><span className="data-icon fa fa-safari"></span></a></Link></li>
+                                            <li className="nav-item"><Link href="https://pinyin.sogou.com"><a target="_blank"><span className="data-icon fa fa-bandcamp"></span></a></Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -119,6 +132,7 @@ a:active,
 a:hover {
 	outline: 0
 }
+
 footer{
 	display: block;
     padding-bottom: 35px;
@@ -271,7 +285,9 @@ footer{
 #footer .logos .data-icon {
 	font-size: 30px
 }
-
+#footer .certificate img {
+    max-width: 100%;
+}
 #footer .payment a,
 #footer .certificate a {
 	font: 0/0 a;
@@ -311,20 +327,17 @@ footer{
 	width: 110px;
 	background-position-x: -106px;
 
-    background-color: black;
 }
 
 #footer .certificate a.bmm {
 	width: 74px;
 	background-position-x: -220px;
-    background-color: white;
 
 }
 
 #footer .certificate a.gli {
 	width: 36px;
 	background-position-x: -303px;
-    background-color: black;
 
 }
 
@@ -336,7 +349,6 @@ footer{
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
 	mix-blend-mode: luminosity;
-    background-color: white;
 
 }
 
@@ -348,7 +360,6 @@ footer{
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
 	mix-blend-mode: luminosity;
-    background-color: black;    
 }
 
 #footer .certificate a.verified {
@@ -359,7 +370,6 @@ footer{
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
 	mix-blend-mode: luminosity;
-    background-color: white;
 }
 
 #footer .payment a {
