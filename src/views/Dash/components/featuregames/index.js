@@ -27,8 +27,8 @@ const Card = props => (
                 <img className="card-img" src={props.source} alt="Jungle Jim"/>
             </div>
             <div className="card-footer">
-                <a href="/" data-hook="launch-if-auth" onClick="return false;" target="_blank" data-game-id="JungleJim_ElDorado" className="btn btn-primary cash-games"> Play Now </a> 
-                <a href="/" onClick="window.open('/launcher/mgs/JungleJim_ElDorado/fun', 'slotGamesLauncher','width=1050, height=785'); return false;" target="_blank" className="btn btn-bordered" style={{}}>Try Now</a>
+                <a href="/" data-hook="launch-if-auth" onClick={($event) => {$event.preventDefault()}} target="_blank" data-game-id="JungleJim_ElDorado" className="btn btn-primary cash-games"> Play Now </a> 
+                <a href="/" onClick={($event) => {$event.preventDefault()}} target="_blank" className="btn btn-bordered" style={{}}>Try Now</a>
             </div>
         </div>
     </li>

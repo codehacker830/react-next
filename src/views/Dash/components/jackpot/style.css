@@ -69,7 +69,6 @@
 	content: '';
 	position: absolute;
 	display: inline-block;
-	background: transparent url("/uploaded/spade888/aefce851a85c383591fd89c71ca0a671586b39b33730a3e93cf1b81396ad16e8.png") center/cover no-repeat;
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
@@ -81,7 +80,6 @@
 	left: 154px;
 	width: 251px;
 	height: 248px;
-	background-image: url("/uploaded/spade888/aefce851a85c383591fd89c71ca0a671586b39b33730a3e93cf1b81396ad16e8.png")
 }
 
 .jackpot-value:after {
@@ -89,7 +87,6 @@
 	left: 480px;
 	width: 211px;
 	height: 208px;
-	background-image: url("/uploaded/spade888/103cf7f406a836f95c215e4a3c3c65b69acf71bd204c98886d2dfb9691f9eb7f.png")
 }
 
 

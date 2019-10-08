@@ -299,7 +299,6 @@ footer{
 	vertical-align: middle;
 	width: 22px;
 	height: 26px;
-	background: transparent url("/uploaded/prometheus_core_template/f4e5124a1f92e9bf273bcd193f8fa2679b8d0d223516bf6f14909e4c649c62be.png") 0 0 no-repeat;
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);

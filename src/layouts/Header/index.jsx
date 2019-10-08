@@ -11,6 +11,7 @@ import {
 } from 'reactstrap';
 import swal from 'sweetalert';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import css
@@ -132,19 +133,30 @@ class Header extends React.Component {
     }
 
     logIn = () => {
-        if(this.state.username == '' || this.state.password == '') {
-            console.log("username and password is invalid");
+        if(this.state.username == '' || this.state.password == '' || ((this.state.username.trim())).length < 4 || ((this.state.password).trim()).length < 4) {
             swal({
                 title: "Alert",
-                text: "Please Enter Username and Password",
+                text: "Username and Password must be more than 4 characters",
                 dangerMode: true,
             });
         } else {
+            console.log("here goes login api: ", loginData);
             let loginData = {
                 username: this.state.username,
                 password: this.state.password,
             }
-            console.log("here goes login api: ", loginData);
+            axios.post('http://v.inplayint-dev.com:81/api/login', {
+                userName: loginData.username,
+                password: loginData.password
+            }).then(
+                (res) => {
+                    console.log('here login api success: ', res)
+                }
+            ).catch(
+                (err) => {
+                    console.log('here login api error: ', err)
+                }
+            )
         }
     }
 
